@@ -130,4 +130,9 @@ UPDATE Funcionarios
 SELECT * FROM Funcionarios;
 SELECT * FROM Cargos;
 
+--9 Com base na estrutura do exercicio 8 crie um script de select utilizando joins, para exibir todos os dados preenchidos de funcionarios
+SELECT Funcionarios.id, Funcionarios.nome, Cargos.descricao, Telefones.tel
+FROM Funcionarios
+	JOIN Telefones ON Funcionarios.id = Telefones.id_Funcionario
+	JOIN Cargos On Funcionarios.Id_Cargo = Cargos.Id;
 
