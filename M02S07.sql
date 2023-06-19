@@ -22,5 +22,9 @@ INSERT INTO Clientes  (ID, Nome, Telefone, Endereco)
         (2, 'Maria Antonia' , '123456' , 'Rua Rosas'),
         (3, 'Marcus Vinicius' , '654123', 'Rua Itajai');
 
-
+--3 Crie um script que selecione todos os clientes.        
 SELECT * FROM Clientes;
+
+--4 Crie um Script que selecione os clientes filtrando pelo campo Id
+Select * FROM Clientes
+WHERE id = 1;
