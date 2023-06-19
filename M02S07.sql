@@ -32,3 +32,9 @@ WHERE id = 1;
 --5 Crie um Script, que filtre os clientes utilizando o like '%%'
 Select * FROM Clientes
 WHERE Nome LIKE '%ari%';
+
+--6 Crie um Script para atualizar o endereço do Marcus Vinicius para : Rua do Limão,
+--  Atenção para não rodar um update sem where!
+UPDATE Clientes
+SET Endereco = 'Rua do Limão'
+WHERE Nome = 'Marcus Vinicius';
