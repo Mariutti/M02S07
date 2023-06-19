@@ -103,3 +103,8 @@ SELECT * FROM Telefones;
 --Não apresentar dependência funcional transitiva.
 
 --As tabelas não apresentam atributos não chave dependendo de outros atributos não chave, estando, portanto, nas formas 3FN já a partir da 1FN.
+
+
+--9 Com base na estrutura do exercicio 8 crie um script de select utilizando joins, para exibir todos os dados preenchidos de funcionarios
+SELECT * FROM Funcionarios
+JOIN Telefones ON Funcionarios.id = Telefones.id_Funcionario;
