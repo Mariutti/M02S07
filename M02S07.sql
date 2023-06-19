@@ -28,3 +28,7 @@ SELECT * FROM Clientes;
 --4 Crie um Script que selecione os clientes filtrando pelo campo Id
 Select * FROM Clientes
 WHERE id = 1;
+
+--5 Crie um Script, que filtre os clientes utilizando o like '%%'
+Select * FROM Clientes
+WHERE Nome LIKE '%ari%';
