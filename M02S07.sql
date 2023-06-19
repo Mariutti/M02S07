@@ -101,10 +101,33 @@ SELECT * FROM Telefones;
 --3FN
 --Estar nas 1FN e 2FN
 --Não apresentar dependência funcional transitiva.
+ALTER TABLE funcionarios
+	DROP Cargo;
 
---As tabelas não apresentam atributos não chave dependendo de outros atributos não chave, estando, portanto, nas formas 3FN já a partir da 1FN.
+CREATE TABLE Cargos (
+	Id Int PRIMARY KEY,
+	Descricao VARCHAR(20)
+);
+
+INSERT INTO Cargos
+	VALUES
+		(1, 'Gerente'),
+		(2, 'Atendente');
+
+ALTER TABLE funcionarios
+	ADD COLUMN Id_Cargo INT REFERENCES Cargos(id)
+	
+UPDATE Funcionarios
+	SET id_cargo = 2
+	WHERE id = 1;
+UPDATE Funcionarios	
+	SET id_cargo = 1
+	WHERE id = 2;
+UPDATE Funcionarios	
+	SET id_cargo = 2
+	WHERE id = 3;	
+
+SELECT * FROM Funcionarios;
+SELECT * FROM Cargos;
 
 
---9 Com base na estrutura do exercicio 8 crie um script de select utilizando joins, para exibir todos os dados preenchidos de funcionarios
-SELECT * FROM Funcionarios
-JOIN Telefones ON Funcionarios.id = Telefones.id_Funcionario;
