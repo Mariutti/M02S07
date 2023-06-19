@@ -38,3 +38,8 @@ WHERE Nome LIKE '%ari%';
 UPDATE Clientes
 SET Endereco = 'Rua do Limão'
 WHERE Nome = 'Marcus Vinicius';
+
+--7 Crie o Script para Excluir o cliente Id 2
+--  Atenção: Para não rodar um delete sem WHERE
+DELETE FROM Clientes
+WHERE id = 2;
